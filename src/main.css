@@ -3,13 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
+h1{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+.header img {
+    height: 320px;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
 
 body{
     background-color: #1e272e;
 }
 
 img{
-    width: 100%;
     display: block;
 }
 
@@ -20,11 +32,37 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 792px;
 }
 
 .grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px
+    gap: 10px;
+}
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(109.6deg, rgb(255, 219, 47) 11.2%, rgb(244, 253, 0) 100.2%);
+}
+
+.card img{
+    opacity: 0;
+}
+
+.selected{
+    outline: 3px solid #0fbcf9;
+    outline-offset: -3px;
+    border: radius 8px;
+}
+
+.selected img{
+    opacity: 1;
+}
+
+.matched{
+    outline: 3px solid #ff3f34;
 }

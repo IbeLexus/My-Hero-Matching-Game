@@ -46,3 +46,40 @@ const showCardBoard = (() =>{
 })
 
 showCardBoard();
+
+//even listener
+
+grid.addEventListener('click', (e)=> {
+    let selectedCard = e.target.parentElement
+    if(e.target.classList.contains('grid')){
+        return;
+    }
+
+    if(count < 2){
+        count ++;
+        if(count = 1){
+            firstCardGuess = selectedCard.dataset.name;
+            console.log(firstCardGuess)
+            selectedCard.classList.add('selected', 'is-clicked');
+        } else{
+            if(!selectedCard.classList.contains('is-clicked')){
+                secondCardGuess = selectedCard.dataset.name;
+                console.log(secondCardGuess);
+                selectedCard.classList.add('selected');
+                checkCardMatch = (firstCardGuess, secondCardGuess);
+                document.querySelectorAll('card').forEach((card)=> {
+                    card.classList.remove('is-clicked');
+                });
+            } else{
+                count --;
+            }
+        }
+    }
+});
+
+const checkCardMatch = ((guess1, guess2) => {
+    if(guess1 = guess2) match();
+    else unmatch();
+})
+
+//
