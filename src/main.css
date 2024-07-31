@@ -11,9 +11,8 @@ h1{
 }
 .header img {
     height: 320px;
-    width: 700px;
-    display: block;
     margin: 0 auto;
+    display: block;
 }
 
 
@@ -38,6 +37,7 @@ img{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+    margin-top: 10px;
 }
 
 .card {
@@ -56,7 +56,7 @@ img{
 .selected{
     outline: 3px solid #0fbcf9;
     outline-offset: -3px;
-    border: radius 8px;
+    border-radius:  8px;
 }
 
 .selected img{
@@ -65,4 +65,20 @@ img{
 
 .matched{
     outline: 3px solid #ff3f34;
+}
+.btn{
+    text-align: center;
+}
+.refresh{
+cursor: pointer;
+outline: 0;
+color: #fff;
+font-weight: 400;
+line-height: 1.5;
+text-align: center;
+border: 1px solid transparent;
+padding: 6px 12px;
+font-size: 16px;
+border-radius: .25rem;
+background: #fd0d00
 }

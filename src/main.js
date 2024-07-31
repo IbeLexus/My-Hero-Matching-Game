@@ -47,7 +47,7 @@ const showCardBoard = (() =>{
 
 showCardBoard();
 
-//even listener
+//event listener
 
 grid.addEventListener('click', (e)=> {
     let selectedCard = e.target.parentElement
@@ -57,29 +57,53 @@ grid.addEventListener('click', (e)=> {
 
     if(count < 2){
         count ++;
-        if(count = 1){
+        if(count === 1){
             firstCardGuess = selectedCard.dataset.name;
             console.log(firstCardGuess)
             selectedCard.classList.add('selected', 'is-clicked');
         } else{
-            if(!selectedCard.classList.contains('is-clicked')){
+            if (!selectedCard.classList.contains('is-clicked')) {
                 secondCardGuess = selectedCard.dataset.name;
                 console.log(secondCardGuess);
                 selectedCard.classList.add('selected');
-                checkCardMatch = (firstCardGuess, secondCardGuess);
-                document.querySelectorAll('card').forEach((card)=> {
+                checkCardMatch(firstCardGuess, secondCardGuess);
+                document.querySelectorAll('.card').forEach((card) => {
                     card.classList.remove('is-clicked');
                 });
-            } else{
-                count --;
+            } else {
+                count--;
             }
+            
         }
     }
 });
 
-const checkCardMatch = ((guess1, guess2) => {
-    if(guess1 = guess2) match();
-    else unmatch();
-})
+const checkCardMatch = (guess1, guess2) => {
+    if (guess1 === guess2) {
+        match();
+    } else {
+        unmatch();
+    }
+}
 
-//
+const match = () => {
+    let selectedCards = document.querySelectorAll('.selected');
+    selectedCards.forEach(card => {
+        card.classList.add('matched')
+        card.querySelector('img').style.opacity = "1"
+        card.style.pointerEvents = "none"
+        card.style = "0.9"
+        card.classList.remove('selected', 'is-clicked');
+    });
+    count = 0;
+};
+
+const unmatch = () => {
+    let selectedCards = document.querySelectorAll('.selected');
+    setTimeout(() => {
+        selectedCards.forEach((card) => {
+            card.classList.remove('selected');
+        });
+    }, 500);
+    count =0;
+}
