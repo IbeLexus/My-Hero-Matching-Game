@@ -107,3 +107,9 @@ const unmatch = () => {
     }, 500);
     count =0;
 }
+
+const refresh = document.getElementById('btn')
+
+refresh.addEventListener("click", () => {
+    location.reload();
+})

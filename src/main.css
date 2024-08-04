@@ -66,7 +66,7 @@ img{
 .matched{
     outline: 3px solid #ff3f34;
 }
-.btn{
+#btn{
     text-align: center;
 }
 .refresh{
