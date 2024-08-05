@@ -10,7 +10,7 @@ h1{
     margin-bottom: 10px;
 }
 .header img {
-    height: 320px;
+    width: 65%;
     margin: 0 auto;
     display: block;
 }
