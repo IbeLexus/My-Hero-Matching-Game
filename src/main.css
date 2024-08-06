@@ -10,7 +10,7 @@ h1{
     margin-bottom: 10px;
 }
 .header img {
-    height: 320px;
+    width: 65%;
     margin: 0 auto;
     display: block;
 }
@@ -83,6 +83,7 @@ border-radius: .25rem;
 background: #fd0d00
 }
 
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .grid {
@@ -125,3 +126,4 @@ background: #fd0d00
       grid-template-columns: 1fr;
     }
   }
+
