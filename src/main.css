@@ -82,3 +82,48 @@ font-size: 16px;
 border-radius: .25rem;
 background: #fd0d00
 }
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .main_container {
+      padding: 1rem;
+    }
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .header img {
+      height: 240px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+    .header img {
+      height: 200px;
+    }
+    .refresh {
+      padding: 4px 8px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
